@@ -14,8 +14,8 @@ I needed to look at all of the data in all of the files.
 Eventually, that made sense.
 
 This directory contains 4 files for the project:
-1) README.md this file
-2) codebook.txt : This describes each of the files and transforms
-3) run_analysis.R: Code to do all of the transforms
-4) tidyData.txt:  The result data after all of the transforms in a text formet.
+1. README.md this file
+2. codebook.txt : This describes each of the files and transforms
+3. run_analysis.R: Code to do all of the transforms
+4. tidyData.txt:  The result data after all of the transforms in a text formet.
 
