@@ -1,0 +1,28 @@
+Project Code Book
+The following files are provided:
+test/X_test.txt
+test/subject_test.txt
+test/y_test.txt
+train/X_train.txt
+train/subject_train.txt
+train/y_train.txt
+activity_labels.txt
+features.txt
+##
+##
+## The code book will work like this:
+## show what is in each file
+## show how that file will feed into the final data set
+X_test.txt, X_test.txt :             this has 561 columns of activity measurements
+subject_test.txt, subject_train.txt: this has the subject ID for each row of the data set
+y_test.txt, y_train.txt:             this has the activityCode for each row of the data set
+
+activity_labels.txt: Use this to convert the activityCodes to friendly activity labels
+
+The Plan:
+load up the test files with 561 columns
+tack on the subject column and tack on the 'activity' column.
+Note that the 'activity' column will come from a lookup of the activity label.
+
+That's it, the final data set should look like this:
+66 columns of stds and means, subjectID, activity 
