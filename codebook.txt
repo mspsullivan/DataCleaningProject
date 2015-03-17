@@ -10,12 +10,9 @@ activity_labels.txt
 features.txt
 ##
 ##
-## The code book will work like this:
-## show what is in each file
-## show how that file will feed into the final data set
-X_test.txt, X_test.txt :             this has 561 columns of activity measurements
+X_test.txt, X_train.txt : This has 561 columns of activity measurements
 subject_test.txt, subject_train.txt: this has the subject ID for each row of the data set
-y_test.txt, y_train.txt:             this has the activityCode for each row of the data set
+y_test.txt, y_train.txt: This has the activityCode for each row of the data set
 
 activity_labels.txt: Use this to convert the activityCodes to friendly activity labels
 
@@ -24,5 +21,8 @@ load up the test files with 561 columns
 tack on the subject column and tack on the 'activity' column.
 Note that the 'activity' column will come from a lookup of the activity label.
 
-That's it, the final data set should look like this:
-66 columns of stds and means, subjectID, activity 
+Next, clean up the labels by swapping the 't' for 'time'.
+Swap the 'f' for 'Fourier' and remove the extra '.' characters.
+That will make the labels more readable.
+
+The final data should just have a few columns for each row. There will be a few rows for each subject. One row each for STANDING, WALKING and the other activities.
