@@ -10,9 +10,11 @@
 #
 # http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 #
-
 #install.packages("dplyr")
 library(dplyr)
+library(plyr)
+library(reshape2)
+
 # Load a data frame with column names
 features <- read.table("UCI HAR Dataset/features.txt")
 traind <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features[,2], header = FALSE)
@@ -62,12 +64,8 @@ newNames2 <- sub("^f", "fourier", newNames)
 newNames3 <- sub("..", "", newNames2, fixed = TRUE)
 names(preDataSet) <- newNames3
 # Step 5 average each variable for each activity and each subject. That is the tidy data set.
-# This data set should have columns for subject.id, WALKING.average, WALKING_UPSTAIRS.average, WALKING_DOWNSTAIRS.average, 
-#                                                   SITTING.average, STANDING.average, LAYING.average, run.average, 
-# This data set should have a row for each subject
-# try something like this:
-library(plyr)
-tidyDataSet <- ddply(preDataSet,.(subject, activity),summarize,value=mean(preDataSet[,4]))
+# This data set should have three columns and be easy to use to cross-check results.
+tidyDataSet <- ddply(melt(preDataSet, id.vars=c("subject", "activity")), .(subject, activity), summarize, NewValues = mean(value))
 # That's it, write the data set out.
 write.table(tidyDataSet, file = "tidyData.txt", col.name = FALSE)
 
