@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "CleaningData",
+    "owner": "bob",
+    "description": "This system will clean data"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "top level",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "mike"
+  }
+}
