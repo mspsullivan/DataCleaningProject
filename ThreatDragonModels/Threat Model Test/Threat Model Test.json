@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "title": "Threat Model Test",
+    "owner": "bob",
+    "description": "This system cleans data"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "reviewer": "helga"
+  }
+}
